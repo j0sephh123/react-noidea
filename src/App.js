@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Navbar from './navbar';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Navbar from './navbar';
 import Main from './main'; // not used just to test routes
 import Edit from './edit'; // not used just to test routes
+import Breadcrumb from './breadcrumb';
 import Show from './show';  
 import Categories from './categories';
 
@@ -13,7 +14,8 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-        <div className="d-flex border border-secondary">
+        <Breadcrumb />
+        <div className="container d-flex border border-secondary">
           <Categories />
           <Show />
         </div>
